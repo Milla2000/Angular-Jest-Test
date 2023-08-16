@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+
+<div class="main">
+    <form action="" [formGroup]="form" class="loginform" (ngSubmit)="login()" >
+        <div *ngIf="alertMsg" class="alert">{{ alertMsg }}</div>
+        <div class="inputs">
+            <label for="">Email</label> <br>
+            <input type="email" name="email" id="useremail" formControlName="email">
+        </div>
+        <div class="inputs">
+            <label for="">Password</label> <br>
+            <input type="password" name="password" id="password" formControlName="password">
+        </div>
+        <div class="submitbtn">
+            <input type="submit" value="Login">
+        </div>
+    </form>
+</div>
