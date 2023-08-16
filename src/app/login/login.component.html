@@ -6,13 +6,14 @@
         <div class="inputs">
             <label for="">Email</label> <br>
             <input type="email" name="email" id="useremail" formControlName="email">
+            <p class="error" *ngIf="!form.get('email')!.valid && form.get('email')!.touched">This field is invalid</p>
         </div>
         <div class="inputs">
             <label for="">Password</label> <br>
             <input type="password" name="password" id="password" formControlName="password">
         </div>
         <div class="submitbtn">
-            <input type="submit" value="Login">
+            <input type="submit" value="Login" data-cy="loginbtn">
         </div>
     </form>
 </div>
